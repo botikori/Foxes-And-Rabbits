@@ -1,0 +1,15 @@
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/bin/Debug/net7.0/FoxesAndRabbits
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/bin/Debug/net7.0/FoxesAndRabbits.deps.json
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/bin/Debug/net7.0/FoxesAndRabbits.runtimeconfig.json
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/bin/Debug/net7.0/FoxesAndRabbits.dll
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/bin/Debug/net7.0/FoxesAndRabbits.pdb
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.csproj.AssemblyReference.cache
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.AssemblyInfoInputs.cache
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.AssemblyInfo.cs
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.csproj.CoreCompileInputs.cache
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.dll
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/refint/FoxesAndRabbits.dll
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.pdb
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.genruntimeconfig.cache
+/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/Debug/net7.0/ref/FoxesAndRabbits.dll
