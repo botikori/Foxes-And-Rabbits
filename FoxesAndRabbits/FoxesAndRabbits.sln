@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxesAndRabbits", "FoxesAndRabbits\FoxesAndRabbits.csproj", "{C3A4DE98-FA4A-4544-88CE-63A8D99E66F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxesAndRabbits", "FoxesAndRabbits\FoxesAndRabbits.csproj", "{5AEDA89C-9A11-4F93-8396-09926DECE36A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3A4DE98-FA4A-4544-88CE-63A8D99E66F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3A4DE98-FA4A-4544-88CE-63A8D99E66F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3A4DE98-FA4A-4544-88CE-63A8D99E66F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3A4DE98-FA4A-4544-88CE-63A8D99E66F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AEDA89C-9A11-4F93-8396-09926DECE36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AEDA89C-9A11-4F93-8396-09926DECE36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AEDA89C-9A11-4F93-8396-09926DECE36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AEDA89C-9A11-4F93-8396-09926DECE36A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
