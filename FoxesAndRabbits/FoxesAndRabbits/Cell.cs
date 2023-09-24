@@ -6,6 +6,8 @@ public class Cell
     public int XPos { get; set; }
     public int YPos { get; set; }
 
+    public Animal? AnimalStandingOnCell { get; set; } = null;
+
     public void SetRandomGrassState()
     {
         Random random = new Random();

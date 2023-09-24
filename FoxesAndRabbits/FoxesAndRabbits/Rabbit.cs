@@ -2,7 +2,7 @@
 
 public class Rabbit : Animal
 {
-    public Rabbit()
+    public Rabbit(Grid grid) : base(grid)
     {
         _hunger = 5;
         _stepDistance = 1;

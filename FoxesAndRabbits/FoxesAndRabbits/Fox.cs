@@ -2,7 +2,7 @@
 
 public class Fox : Animal
 {
-    public Fox()
+    public Fox(Grid grid) : base(grid)
     {
         _hunger = 10;
         _stepDistance = 1;
