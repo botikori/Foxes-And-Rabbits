@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DiPPsuCM6GOyCEjwWwQbppQfEHBv+TSs++qrB9FPnknGqb7K9bex4KkjnBYFYXyKTSxrAMFmvpML9xZpMQKV9g==",
+  "dgSpecHash": "Rc2V87ow+fu6Ly/gnN0dN2i/U1P/sS5pavJuplqoUo0GcgMzz3ayBeG0fb/yPDzsdn3OLf/NkAH223aZnHoJVQ==",
   "success": true,
-  "projectFilePath": "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj",
-  "expectedPackageFiles": [
-    "/home/botikori/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.11/microsoft.aspnetcore.app.ref.7.0.11.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

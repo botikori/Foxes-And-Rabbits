@@ -23,9 +23,7 @@ public class Grid
 
     private void CreateCell(int x, int y)
     {
-        Cell currentCell = new Cell();
+        Cell currentCell = new Cell(x,y);
         _cells[x, y] = currentCell;
-        currentCell.XPos = x;
-        currentCell.YPos = y;
     }
 }
