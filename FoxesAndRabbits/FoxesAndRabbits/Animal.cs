@@ -4,7 +4,8 @@ namespace FoxesAndRabbits;
 
 public class Animal
 {
-    protected int _hunger;
+    protected int _maxHunger;
+    protected int _currentHunger;
     protected int _stepDistance;
     private Grid _grid;
     
@@ -14,6 +15,8 @@ public class Animal
     public Animal(Grid grid)
     {
         this._grid = grid;
+        this._stepDistance = 1;
+        this._currentHunger = this._maxHunger;
     }
     
 
@@ -24,8 +27,8 @@ public class Animal
 
     public void DecreaseHunger()
     {
-        _hunger--;
-        if (_hunger == 0)
+        _currentHunger--;
+        if (_currentHunger == 0)
         {
             Die();
         }

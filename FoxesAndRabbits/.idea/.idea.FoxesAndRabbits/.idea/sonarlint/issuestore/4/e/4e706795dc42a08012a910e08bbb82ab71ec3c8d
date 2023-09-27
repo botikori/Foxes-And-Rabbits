@@ -1,4 +1,6 @@
 
-›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Šï­ şÿÿÿÿ
-›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Á©’´ûÿÿÿÿ
-¢csharpsquid:S1186$"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(äè‚şüÿÿÿÿ8ôŞ½¬1
+›csharpsquid:S1186"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Šï­ şÿÿÿÿ
+›csharpsquid:S1186$"yAdd a nested comment explaining why this method is empty, throw a 'NotSupportedException' or complete the implementation.(Á©’´ûÿÿÿÿ
+Acsharpsquid:S2933
+"Make '_grid' 'readonly'.(¦ÿğÆúÿÿÿÿ8‰Â€»­1
+Tcsharpsquid:S1481+"0Remove the unused local variable 'nextPosition'.(ÿÁ»ù8ŠÂ€»­1

@@ -8,13 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/4/e/4e706795dc42a08012a910e08bbb82ab71ec3c8d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/4/e/4e706795dc42a08012a910e08bbb82ab71ec3c8d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.csproj.AssemblyReference.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" afterDir="false" />
@@ -31,6 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -43,26 +46,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\snorb\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\szabo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FoxesAndRabbits" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -93,12 +96,15 @@
       <updated>1695565841903</updated>
       <workItem from="1695565849683" duration="857000" />
       <workItem from="1695567773732" duration="854000" />
+      <workItem from="1695830467216" duration="90000" />
+      <workItem from="1695831440088" duration="887000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
