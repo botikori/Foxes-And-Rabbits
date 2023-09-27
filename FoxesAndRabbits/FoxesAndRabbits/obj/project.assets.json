@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\szabo\\.nuget\\packages\\": {}
+    "C:\\Users\\snorb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
+      "projectUniqueName": "C:\\Users\\snorb\\OneDrive\\Dokumentumok\\GitHub\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
       "projectName": "FoxesAndRabbits",
-      "projectPath": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
-      "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\obj\\",
+      "projectPath": "C:\\Users\\snorb\\OneDrive\\Dokumentumok\\GitHub\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
+      "packagesPath": "C:\\Users\\snorb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\snorb\\OneDrive\\Dokumentumok\\GitHub\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\snorb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

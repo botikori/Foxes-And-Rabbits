@@ -5,7 +5,7 @@ public class Grid
     private int _width, _height;
     private Cell[,] _cells;
 
-    public void CreateBoard(int width, int height)
+    public Grid(int width, int height)
     {
         _cells = new Cell[width, height];
 
@@ -46,5 +46,24 @@ public class Grid
         }
 
         return true;
+    }
+
+    public void DrawGrid()
+    {
+        Dictionary<Grass, string> symbols = new Dictionary<Grass, string>()
+        {
+            {Grass.Low,"O"},
+            {Grass.Medium,"X"},
+            {Grass.High, "#"}
+        };
+        
+        for (int i = 0; i < _width; i++)
+        {
+            for (int j = 0; j < _height; j++)
+            {
+                Console.Write($"{symbols[_cells[i,j].GrassState]} | ");
+            }
+            Console.WriteLine();
+        }
     }
 }
