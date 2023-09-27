@@ -9,16 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +84,7 @@
       <workItem from="1695567773732" duration="854000" />
       <workItem from="1695830467216" duration="90000" />
       <workItem from="1695831440088" duration="887000" />
-      <workItem from="1695841639724" duration="709000" />
+      <workItem from="1695841639724" duration="1844000" />
     </task>
     <servers />
   </component>

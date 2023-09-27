@@ -11,6 +11,7 @@ public class Animal
     
     protected Cell standingOn;
 
+    public static Action? OnStep;
 
     public Animal(Grid grid)
     {
@@ -38,10 +39,29 @@ public class Animal
         
     }
 
+    public void UpdatePosition(Cell nextPosition)
+    {
+        standingOn.AnimalStandingOnCell = null;
+        nextPosition.AnimalStandingOnCell = this;
+        standingOn = nextPosition;
+    }
+
+    private bool CanStep(Vector2 direction)
+    {
+        if (_grid.IsCellValid(standingOn.XPos + (int)direction.X * _stepDistance 
+                , standingOn.YPos + (int)direction.Y * _stepDistance))
+        {
+            return true;
+        }
+
+        return false;
+    }
+    
     public void Step(Vector2 direction)
     {
         Cell nextPosition = _grid.GetCellAtPosition(standingOn.XPos + (int)direction.X * _stepDistance 
             , standingOn.YPos + (int)direction.Y * _stepDistance);
-        
+        UpdatePosition(nextPosition);
+        OnStep?.Invoke();
     }
 }
