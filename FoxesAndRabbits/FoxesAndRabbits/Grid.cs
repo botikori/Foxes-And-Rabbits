@@ -2,15 +2,17 @@ namespace FoxesAndRabbits;
 
 public class Grid
 {
-    private int _width, _height;
+    public int Width { get; init; }
+    public int Height { get; init; }
+    
     private Cell[,] _cells;
 
     public Grid(int width, int height)
     {
         _cells = new Cell[width, height];
 
-        this._width = width;
-        this._height = height;
+        Width = width;
+        Height = height;
 
         for (int y = 0; y < height; y++)
         {
@@ -40,7 +42,7 @@ public class Grid
 
     public bool IsCellValid(int x, int y)
     {
-        if (x < 0 || x >= _width || y < 0 || y >= _height)
+        if (x < 0 || x >= Width || y < 0 || y >= Height)
         {
             return false;
         }
@@ -57,9 +59,9 @@ public class Grid
             {Grass.High, "#"}
         };
         
-        for (int i = 0; i < _width; i++)
+        for (int i = 0; i < Width; i++)
         {
-            for (int j = 0; j < _height; j++)
+            for (int j = 0; j < Height; j++)
             {
                 Console.Write($"{symbols[_cells[i,j].GrassState]} | ");
             }
