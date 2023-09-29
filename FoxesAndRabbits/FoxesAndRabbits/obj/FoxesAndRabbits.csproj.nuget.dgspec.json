@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj": {}
+    "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj": {}
   },
   "projects": {
-    "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj": {
+    "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj",
+        "projectUniqueName": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
         "projectName": "FoxesAndRabbits",
-        "projectPath": "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj",
-        "packagesPath": "/home/botikori/.nuget/packages/",
-        "outputPath": "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/obj/",
+        "projectPath": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
+        "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\szabo\\OneDrive\\Desktop\\OnlineOktatas\\IKT\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/botikori/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\szabo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,18 +50,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.11, 7.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -34,6 +34,12 @@ public class Animal
             Die();
         }
     }
+    
+    protected void Eat(int foodValue = 3)
+    {
+        if (_currentHunger + foodValue <= _maxHunger)
+            _currentHunger += foodValue;
+    }
     protected void Breed()
     {
         

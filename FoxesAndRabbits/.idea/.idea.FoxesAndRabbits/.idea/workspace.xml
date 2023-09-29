@@ -10,6 +10,16 @@
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +56,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/home/botikori/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/botikori/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/botikori/.local/share/Symbols/src"
+      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\szabo\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -85,6 +95,7 @@
       <workItem from="1695830467216" duration="90000" />
       <workItem from="1695831440088" duration="887000" />
       <workItem from="1695841639724" duration="1844000" />
+      <workItem from="1695983272308" duration="564000" />
     </task>
     <servers />
   </component>
