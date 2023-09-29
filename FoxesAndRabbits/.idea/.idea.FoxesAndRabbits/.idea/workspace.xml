@@ -8,8 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/FoxRangeTooLowException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
@@ -56,9 +59,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\szabo\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\snorb\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -96,6 +99,7 @@
       <workItem from="1695831440088" duration="887000" />
       <workItem from="1695841639724" duration="1844000" />
       <workItem from="1695983272308" duration="564000" />
+      <workItem from="1695984027144" duration="2144000" />
     </task>
     <servers />
   </component>

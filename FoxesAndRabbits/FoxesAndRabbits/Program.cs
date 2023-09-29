@@ -35,7 +35,6 @@ do
 
 Console.Clear();
 
-
-
 Grid grid = new Grid(columns,rows);
 grid.DrawGrid();
+
