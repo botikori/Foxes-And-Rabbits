@@ -1,4 +1,4 @@
-﻿namespace FoxesAndRabbits;
+﻿namespace FoxesAndRabbits.Core.Exceptions;
 
 public class FoxRangeTooLowException : Exception
 {

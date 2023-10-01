@@ -1,4 +1,4 @@
-﻿using FoxesAndRabbits;
+﻿using FoxesAndRabbits.Core;
 
 int columns;
 int rows;

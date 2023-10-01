@@ -1,4 +1,6 @@
-﻿namespace FoxesAndRabbits;
+﻿using FoxesAndRabbits.Core.Exceptions;
+
+namespace FoxesAndRabbits.Core;
 
 public class Fox : Animal
 {

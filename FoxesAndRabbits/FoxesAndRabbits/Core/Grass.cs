@@ -1,4 +1,4 @@
-﻿namespace FoxesAndRabbits;
+﻿namespace FoxesAndRabbits.Core;
 
 public enum Grass
 {

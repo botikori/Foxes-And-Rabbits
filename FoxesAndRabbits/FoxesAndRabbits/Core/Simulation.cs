@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace FoxesAndRabbits;
+namespace FoxesAndRabbits.Core;
 
 public class Simulation
 {
@@ -41,9 +41,7 @@ public class Simulation
     {
         foreach (var position in positions)
         {
-            
+
         }
     }
-
-    
 }

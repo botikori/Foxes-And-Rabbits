@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace FoxesAndRabbits;
+namespace FoxesAndRabbits.Core;
 
 public class Animal
 {
