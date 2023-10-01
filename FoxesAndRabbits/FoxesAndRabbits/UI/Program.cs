@@ -1,4 +1,5 @@
 ﻿using FoxesAndRabbits.Core;
+using FoxesAndRabbits.UI;
 
 int columns;
 int rows;
@@ -35,6 +36,22 @@ do
 
 Console.Clear();
 
+char answer;
+bool correct;
+do
+{
+    Console.WriteLine("Szeretnéd az állatokat véletlenszerűen elhelyezni? (I/N)");
+    correct = char.TryParse(Console.ReadLine().ToLower(), out answer);
+} while (!correct);
+
 Grid grid = new Grid(columns,rows);
-grid.DrawGrid();
+Simulation simulation = new Simulation(grid,5); //Ezt még tovább kell vinni!
+
+if (answer == 'i')
+    simulation.StartSimulation();
+else
+    Console.WriteLine("Az jó de ezt még nem írtam meg -_-");//Ez még nincs implementálva
+
+DrawGrid drawGrid = new DrawGrid(grid);
+drawGrid.Draw();
 

@@ -8,12 +8,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/FoxRangeTooLowException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/DrawGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/0/e/0e009049f8b32e187459c05996c123c53a77595f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/4/e/4e706795dc42a08012a910e08bbb82ab71ec3c8d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/7/c/7cbb2d1e7977413023ab71c8e2e39e15f8cf4fa1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/a/7/a70a9adc4ba0d71519ba6945d035a99a2cb05bce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/b/4/b4beaf2c81f8624096aa35a5ee40e50ad0b1986d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/b/f/bfd42e56a41b3660cc794228ea6f016e88287fbb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/c/2/c2a8f0226d5f9fc3bc946584671cffb76ee5c1da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/0/e/0e009049f8b32e187459c05996c123c53a77595f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/4/e/4e706795dc42a08012a910e08bbb82ab71ec3c8d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/7/c/7cbb2d1e7977413023ab71c8e2e39e15f8cf4fa1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/a/7/a70a9adc4ba0d71519ba6945d035a99a2cb05bce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/b/4/b4beaf2c81f8624096aa35a5ee40e50ad0b1986d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/b/f/bfd42e56a41b3660cc794228ea6f016e88287fbb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/c/2/c2a8f0226d5f9fc3bc946584671cffb76ee5c1da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits.sln" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Fox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Rabbit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
@@ -31,6 +46,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/74240aa614d64282aec170c351f7d04f7b8a8/6e/24d01ac6/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6879c9ed20391a5ccfea363be5964fbcfe4f1dfde9558aa84b36df6b6ec92c6/List.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -50,6 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.36936936",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,9 +79,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\snorb\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\szabo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\szabo\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -100,6 +120,7 @@
       <workItem from="1695841639724" duration="1844000" />
       <workItem from="1695983272308" duration="564000" />
       <workItem from="1695984027144" duration="2144000" />
+      <workItem from="1696182260012" duration="4087000" />
     </task>
     <servers />
   </component>

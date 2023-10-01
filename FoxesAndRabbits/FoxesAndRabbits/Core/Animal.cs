@@ -9,7 +9,7 @@ public class Animal
     protected int _stepDistance;
     private Grid _grid;
     
-    protected Cell standingOn;
+    protected Cell? standingOn;
 
     public static Action? OnStep;
 
@@ -49,7 +49,8 @@ public class Animal
 
     public void UpdatePosition(Cell nextPosition)
     {
-        standingOn.AnimalStandingOnCell = null;
+        if (standingOn != null)
+            standingOn.AnimalStandingOnCell = null;
         nextPosition.AnimalStandingOnCell = this;
         standingOn = nextPosition;
     }
