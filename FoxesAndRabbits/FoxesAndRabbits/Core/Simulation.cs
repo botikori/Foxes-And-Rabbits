@@ -15,14 +15,19 @@ public class Simulation
         
         _random = new Random();
     }
-    
+
     public void StartSimulation()
+    {
+        StartSimulation(GenerateRandomPositions().first, GenerateRandomPositions().second);
+    }
+    
+    private (List<Vector2> first, List<Vector2> second) GenerateRandomPositions()
     {
         List<Vector2> randomPositions = new List<Vector2>();
         
         int i = 0;
         
-        while (i < _animalCount)
+        while (i < _animalCount * 2)
         {
             Vector2 randomPosition = new Vector2(_random.Next(0, _grid.Width), _random.Next(0, _grid.Height));
             
@@ -33,15 +38,20 @@ public class Simulation
             }
             
         }
-        
-        StartSimulation(randomPositions);
+
+        return (randomPositions.Take(_animalCount).ToList(), randomPositions.Skip(_animalCount).ToList());
     }
 
-    public void StartSimulation(List<Vector2> positions)
+    public void StartSimulation(List<Vector2> rabbitPositions, List<Vector2> foxPositions)
     {
-        foreach (var position in positions)
+        foreach (var rabbitPosition in rabbitPositions)
         {
+            Rabbit currentRabbit = new Rabbit(_grid, rabbitPosition);
+        }
 
+        foreach (var foxPosition in foxPositions)
+        {
+            Fox currentFox = new Fox(_grid, foxPosition);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using FoxesAndRabbits.Core.Exceptions;
+﻿using System.Numerics;
+using FoxesAndRabbits.Core.Exceptions;
 
 namespace FoxesAndRabbits.Core;
 
@@ -7,10 +8,7 @@ public class Fox : Animal
     private static int DetectRange;
     private const int MinDetectRange = 2;
     private const int MaxDetectRange = 6;
-    public Fox(Grid grid) : base(grid)
-    {
-        _maxHunger = 10;
-    }
+    
     public static void SetFoxDetectRange(int range)
     {
         if (range > MaxDetectRange || range < MinDetectRange) 
@@ -22,5 +20,10 @@ public class Fox : Animal
         {
             throw new FoxRangeTooLowException();
         }
+    }
+
+    public Fox(Grid grid, Vector2 startPosition) : base(grid, startPosition)
+    {
+        _maxHunger = 10;
     }
 }

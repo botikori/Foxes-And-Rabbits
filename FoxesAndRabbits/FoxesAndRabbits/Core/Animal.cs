@@ -13,11 +13,13 @@ public class Animal
 
     public static Action? OnStep;
 
-    public Animal(Grid grid)
+    public Animal(Grid grid, Vector2 startPosition)
     {
         this._grid = grid;
         this._stepDistance = 1;
         this._currentHunger = this._maxHunger;
+        
+        UpdatePosition(_grid.GetCellAtPosition((int)startPosition.X, (int)startPosition.Y));
     }
     
 
