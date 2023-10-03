@@ -1,4 +1,5 @@
-﻿using FoxesAndRabbits.Core;
+﻿using System.Numerics;
+using FoxesAndRabbits.Core;
 using FoxesAndRabbits.UI;
 
 int columns;
@@ -36,21 +37,65 @@ do
 
 Console.Clear();
 
+
+int numberOfFoxes;
+int numberOfRabbits;
+int numberOfAnimals;
+bool correctAmount;
+do
+{
+    Console.WriteLine($"#3 Állatok száma a pályán");
+    Console.Write("Nyúlak száma: ");
+    correctAmount = int.TryParse(Console.ReadLine(), out numberOfRabbits);
+    Console.Write("Rókák száma: ");
+    correctAmount = int.TryParse(Console.ReadLine(), out numberOfFoxes);
+    numberOfAnimals = numberOfFoxes + numberOfRabbits;
+    if (numberOfAnimals > (rows*columns)*0.3)
+    {
+        correctAmount = false;
+    }
+    Console.Clear();
+} while (!correctAmount);
+
+
 char answer;
 bool correct;
 do
 {
-    Console.WriteLine("Szeretnéd az állatokat véletlenszerűen elhelyezni? (I/N)");
+    Console.WriteLine("#4 Szeretnéd az állatokat véletlenszerűen elhelyezni? (I/N)");
     correct = char.TryParse(Console.ReadLine().ToLower(), out answer);
+    if (answer != 'i' && answer != 'n')
+    {
+        correct = false;
+        Console.WriteLine("Hibás válasz!");
+    }
+    
 } while (!correct);
 
 Grid grid = new Grid(columns,rows);
-Simulation simulation = new Simulation(grid,5); //Ezt még tovább kell vinni!
+Simulation simulation = new Simulation(grid,numberOfAnimals); //Ezt még tovább kell vinni!
 
 if (answer == 'i')
     simulation.StartSimulation();
-else
-    Console.WriteLine("Az jó de ezt még nem írtam meg -_-");//Ez még nincs implementálva
+else if (answer == 'n')
+{
+    List<Vector2> positionsOfFoxes = new List<Vector2>();
+    List<Vector2> positionsOfRabbits = new List<Vector2>();
+    for (int i = 0; i < numberOfRabbits; i++)
+    {
+        Console.Write($"{i + 1}. nyúl helye(x,y): ");
+        string[] pos = Console.ReadLine().Split(',');
+        positionsOfRabbits.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
+    }
+
+    for (int i = 0; i < numberOfFoxes; i++)
+    {
+        Console.Write($"{i + 1}. róka helye(x,y): ");
+        string[] pos = Console.ReadLine().Split(',');
+        positionsOfFoxes.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
+    }
+    simulation.StartSimulation(positionsOfRabbits,positionsOfFoxes);
+}
 
 DrawGrid drawGrid = new DrawGrid(grid);
 drawGrid.Draw();

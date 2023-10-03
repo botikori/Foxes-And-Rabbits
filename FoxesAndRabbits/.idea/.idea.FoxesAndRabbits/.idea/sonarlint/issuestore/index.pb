@@ -15,3 +15,5 @@ N
 FoxesAndRabbits/Core/Rabbit.cs,b\b\bb59ce7cc5f81eae65c3f7f5f9d9ed5a49b43ba4
 M
 FoxesAndRabbits/UI/Program.cs,3\a\3a18e51e1b8bf317bca700dab40eea0c12002550
+M
+FoxesAndRabbits/Core/Grass.cs,6\d\6d72610adf2bc9a622513ba039252ffabd9b3562

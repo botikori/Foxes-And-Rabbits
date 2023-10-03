@@ -15,3 +15,5 @@ N
 FoxesAndRabbits/UI/DrawGrid.cs,6\8\68fae56bdde4b4fd80d1e973c92af6bdb83673d8
 M
 FoxesAndRabbits/UI/Program.cs,3\a\3a18e51e1b8bf317bca700dab40eea0c12002550
+M
+FoxesAndRabbits/Core/Grass.cs,6\d\6d72610adf2bc9a622513ba039252ffabd9b3562
