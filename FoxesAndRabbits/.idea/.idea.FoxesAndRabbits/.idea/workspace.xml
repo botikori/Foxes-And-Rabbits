@@ -8,19 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +97,7 @@
       <workItem from="1696186730683" duration="60000" />
       <workItem from="1696330761857" duration="633000" />
       <workItem from="1696349778508" duration="2947000" />
+      <workItem from="1696415512162" duration="1143000" />
     </task>
     <servers />
   </component>

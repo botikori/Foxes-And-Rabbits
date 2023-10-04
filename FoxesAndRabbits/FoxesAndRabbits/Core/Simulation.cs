@@ -8,6 +8,7 @@ public class Simulation
     private Random _random;
     private int _animalCount = 2;
     
+    
     public Simulation(Grid grid, int animalCount)
     {
         this._grid = grid;
@@ -53,5 +54,15 @@ public class Simulation
         {
             Fox currentFox = new Fox(_grid, foxPosition);
         }
+    }
+
+    public bool IsGivenPositionCorrect(string[] pos)
+    {
+        int temp;
+        if (pos.Length != 2  || !int.TryParse(pos[0], out temp) || !int.TryParse(pos[1], out temp))
+        {
+            return false;
+        }
+        return true;
     }
 }
