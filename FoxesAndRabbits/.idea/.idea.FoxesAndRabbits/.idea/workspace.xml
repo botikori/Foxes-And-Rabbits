@@ -8,8 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/3/a/3a18e51e1b8bf317bca700dab40eea0c12002550" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/3/a/3a18e51e1b8bf317bca700dab40eea0c12002550" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/7/9/793e607b2789ef1684b2b4571f1df027f164c944" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/7/9/793e607b2789ef1684b2b4571f1df027f164c944" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,9 @@
       <workItem from="1696186730683" duration="60000" />
       <workItem from="1696330761857" duration="633000" />
       <workItem from="1696349778508" duration="2947000" />
-      <workItem from="1696415512162" duration="1143000" />
+      <workItem from="1696415512162" duration="1452000" />
+      <workItem from="1696446260903" duration="111000" />
+      <workItem from="1696590520508" duration="1204000" />
     </task>
     <servers />
   </component>

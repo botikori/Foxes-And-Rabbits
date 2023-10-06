@@ -3,6 +3,6 @@
 7csharpsquid:S2933"Make '_random' 'readonly'.(ÚÀ§•
 Acsharpsquid:S2933	"Make '_animalCount' 'readonly'.(Ğæ¸Îùÿÿÿÿ
 vcsharpsquid:S3604	"TRemove the member initializer, all constructors set an initial value for the member.(Ğæ¸Îùÿÿÿÿ
-Wcsharpsquid:S4136":All 'StartSimulation' method overloads should be adjacent.(›†
-Ncsharpsquid:S14811"1Remove the unused local variable 'currentRabbit'.(©™Ó‡
-Kcsharpsquid:S14816".Remove the unused local variable 'currentFox'.(ø¯“‹
+Wcsharpsquid:S4136":All 'StartSimulation' method overloads should be adjacent.(›†
+Ncsharpsquid:S14812"1Remove the unused local variable 'currentRabbit'.(©™Ó‡
+Kcsharpsquid:S14817".Remove the unused local variable 'currentFox'.(ø¯“‹

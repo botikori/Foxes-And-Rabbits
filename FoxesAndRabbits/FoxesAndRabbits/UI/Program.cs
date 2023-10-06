@@ -79,9 +79,11 @@ if (answer == 'i')
     simulation.StartSimulation();
 else if (answer == 'n')
 {
+
     List<Vector2> positionsOfFoxes = new List<Vector2>();
     List<Vector2> positionsOfRabbits = new List<Vector2>();
     string[] pos;
+
     for (int i = 0; i < numberOfRabbits; i++)
     {
         do
@@ -89,7 +91,9 @@ else if (answer == 'n')
             Console.Write($"{i + 1}. nyúl helye(x,y): ");
             pos = Console.ReadLine().Split(',');
             
-        } while (!simulation.IsGivenPositionCorrect(pos));
+        } while (!simulation.IsGivenPositionCorrect(pos) || positionsOfRabbits.Exists(x=>x.X == int.Parse(pos[0]) 
+                 && x.Y == int.Parse(pos[1]) || 
+                 positionsOfFoxes.Exists(x=>x.X == int.Parse(pos[0]) && x.Y == int.Parse(pos[1]))));
         positionsOfRabbits.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
         
     }
@@ -101,8 +105,10 @@ else if (answer == 'n')
             Console.Write($"{i + 1}. róka helye(x,y): ");
             pos = Console.ReadLine().Split(',');
             
-        } while (!simulation.IsGivenPositionCorrect(pos));
-        positionsOfFoxes.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
+        } while (!simulation.IsGivenPositionCorrect(pos) || positionsOfRabbits.Exists(x=>x.X == int.Parse(pos[0]) 
+                     && x.Y == int.Parse(pos[1]) || 
+                     positionsOfFoxes.Exists(x=>x.X == int.Parse(pos[0]) && x.Y == int.Parse(pos[1]))));
+        positionsOfRabbits.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
     }
     simulation.StartSimulation(positionsOfRabbits,positionsOfFoxes);
 }
