@@ -6,13 +6,15 @@ public class Simulation
 {
     private Grid _grid;
     private Random _random;
-    private int _animalCount = 2;
+    private int _rabbitCount = 2;
+    private int _foxCount = 2;
     
     
-    public Simulation(Grid grid, int animalCount)
+    public Simulation(Grid grid, int rabbitCount, int foxCount)
     {
         this._grid = grid;
-        this._animalCount = animalCount;
+        this._rabbitCount = rabbitCount;
+        this._foxCount = foxCount;
         
         _random = new Random();
     }
@@ -28,7 +30,7 @@ public class Simulation
         
         int i = 0;
         
-        while (i < _animalCount * 2)
+        while (i < _rabbitCount + _foxCount)
         {
             Vector2 randomPosition = new Vector2(_random.Next(0, _grid.Width), _random.Next(0, _grid.Height));
             
@@ -40,7 +42,7 @@ public class Simulation
             
         }
 
-        return (randomPositions.Take(_animalCount).ToList(), randomPositions.Skip(_animalCount).ToList());
+        return (randomPositions.Take(_rabbitCount).ToList(), randomPositions.Skip(_rabbitCount).ToList());
     }
 
     public void StartSimulation(List<Vector2> rabbitPositions, List<Vector2> foxPositions)
@@ -58,11 +60,12 @@ public class Simulation
 
     public bool IsGivenPositionCorrect(string[] pos)
     {
-        int temp;
-        if (pos.Length != 2  || !int.TryParse(pos[0], out temp) || !int.TryParse(pos[1], out temp))
-        {
-            return false;
-        }
-        return true;
+        return pos.Length == 2 
+               && int.TryParse(pos[0], out var tempx)
+               && int.TryParse(pos[1], out var tempy)
+               && tempx < _grid.Width
+               && tempy < _grid.Height
+               && tempx >= 0
+               && tempy >= 0;
     }
 }

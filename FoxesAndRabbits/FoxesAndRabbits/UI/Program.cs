@@ -73,7 +73,7 @@ do
 } while (!correct);
 
 Grid grid = new Grid(columns,rows);
-Simulation simulation = new Simulation(grid,numberOfAnimals); //Ezt még tovább kell vinni!
+Simulation simulation = new Simulation(grid,numberOfRabbits,numberOfFoxes);
 
 if (answer == 'i')
     simulation.StartSimulation();
@@ -92,8 +92,7 @@ else if (answer == 'n')
             pos = Console.ReadLine().Split(',');
             
         } while (!simulation.IsGivenPositionCorrect(pos) || positionsOfRabbits.Exists(x=>x.X == int.Parse(pos[0]) 
-                 && x.Y == int.Parse(pos[1]) || 
-                 positionsOfFoxes.Exists(x=>x.X == int.Parse(pos[0]) && x.Y == int.Parse(pos[1]))));
+                 && x.Y == int.Parse(pos[1])));
         positionsOfRabbits.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
         
     }
@@ -108,7 +107,7 @@ else if (answer == 'n')
         } while (!simulation.IsGivenPositionCorrect(pos) || positionsOfRabbits.Exists(x=>x.X == int.Parse(pos[0]) 
                      && x.Y == int.Parse(pos[1]) || 
                      positionsOfFoxes.Exists(x=>x.X == int.Parse(pos[0]) && x.Y == int.Parse(pos[1]))));
-        positionsOfRabbits.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
+        positionsOfFoxes.Add(new Vector2(int.Parse(pos[0]), int.Parse(pos[1])));
     }
     simulation.StartSimulation(positionsOfRabbits,positionsOfFoxes);
 }
