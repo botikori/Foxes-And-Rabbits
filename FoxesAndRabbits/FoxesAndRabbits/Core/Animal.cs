@@ -47,9 +47,12 @@ public class Animal
         if (_currentHunger + foodValue <= _maxHunger)
             _currentHunger += foodValue;
     }
-    protected void Breed()
+    protected virtual void Breed()
     {
-        //Ide jön maga a Breed majd, új nyúl teremtése.
+        List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange();
+        Cell randomCell = possibleCellsOfTheNewAnimal[random.Next(0, possibleCellsOfTheNewAnimal.Count)];
+        _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell = new Rabbit(_grid, new Vector2(randomCell.XPos,randomCell.YPos));
+        IsBreeding = false;
     }
 
     public void UpdatePosition(Cell nextPosition)
@@ -82,7 +85,7 @@ public class Animal
         {
             for (int y = standingOn.YPos-_stepDistance; y < standingOn.YPos+_stepDistance; y++)
             {
-                if (_grid.IsCellValid(x, y))
+                if (_grid.IsCellValid(x, y) && _grid.GetCellAtPosition(x,y).AnimalStandingOnCell == null)
                 {
                     validCells.Add(_grid.GetCellAtPosition(x,y));
                 }
