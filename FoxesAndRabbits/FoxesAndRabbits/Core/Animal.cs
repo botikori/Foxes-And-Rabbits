@@ -30,7 +30,7 @@ public class Animal
 
     protected void Die()
     {
-        
+        Statistic.numberOfDeaths++;
     }
 
     public void DecreaseHunger()

@@ -57,6 +57,8 @@ do
     Console.Clear();
 } while (!correctAmount);
 
+Statistic.numberOfFoxes = numberOfFoxes;
+Statistic.numberOfRabbits = numberOfRabbits;
 
 char answer;
 bool correct;
@@ -73,6 +75,7 @@ do
 } while (!correct);
 
 Grid grid = new Grid(columns,rows);
+
 Simulation simulation = new Simulation(grid,numberOfRabbits,numberOfFoxes);
 
 if (answer == 'i')
