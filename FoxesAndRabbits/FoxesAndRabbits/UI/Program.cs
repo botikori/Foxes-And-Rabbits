@@ -111,7 +111,19 @@ else if (answer == 'n')
     }
     simulation.StartSimulation(positionsOfRabbits,positionsOfFoxes);
 }
-
+Console.Clear();
 DrawGrid drawGrid = new DrawGrid(grid);
 drawGrid.Draw();
 
+while (true)
+{
+    Console.Write($"Szeretnél a következő képkockára lépni? (I/N):");
+
+    string answer2 = Console.ReadLine();
+
+    if (answer2.ToLower() == "i")
+    {
+        simulation.Tick();
+        drawGrid.UpdateGrid();
+    }   
+}

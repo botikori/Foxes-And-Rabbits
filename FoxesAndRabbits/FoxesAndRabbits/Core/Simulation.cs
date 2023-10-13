@@ -1,4 +1,5 @@
 using System.Numerics;
+using System.Linq;
 
 namespace FoxesAndRabbits.Core;
 
@@ -17,6 +18,17 @@ public class Simulation
         this._foxCount = foxCount;
         
         _random = new Random();
+    }
+
+    public void Tick()
+    {
+        foreach (var cell in _grid.Cells)
+        {
+            if (cell.AnimalStandingOnCell != null)
+            {
+                cell.AnimalStandingOnCell.Step();
+            }
+        }
     }
 
     public void StartSimulation()

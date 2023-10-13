@@ -38,4 +38,10 @@ public class DrawGrid
             Console.WriteLine();
         }
     }
+
+    public void UpdateGrid()
+    {
+        Console.Clear();
+        Draw();
+    }
 }

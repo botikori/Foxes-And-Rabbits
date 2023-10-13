@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PUapz5YsdXsEkTUmAb3ZfCFuQVaG1j3miu82CmER5qXo9jZsGy6IlDGSCsNj7WqUDUslTlMD3L7JLhwSdvLS/A==",
+  "dgSpecHash": "DiPPsuCM6GOyCEjwWwQbppQfEHBv+TSs++qrB9FPnknGqb7K9bex4KkjnBYFYXyKTSxrAMFmvpML9xZpMQKV9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\snorb\\OneDrive\\Dokumentumok\\GitHub\\Foxes-And-Rabbits\\FoxesAndRabbits\\FoxesAndRabbits\\FoxesAndRabbits.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/botikori/Unity Projects/Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/FoxesAndRabbits.csproj",
+  "expectedPackageFiles": [
+    "/home/botikori/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.11/microsoft.aspnetcore.app.ref.7.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
