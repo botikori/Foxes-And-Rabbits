@@ -10,7 +10,7 @@ public class Animal
     private Grid _grid;
     protected Random random;
     protected bool IsHungry;
-    protected bool IsBreeding;
+    public bool IsBreeding;
     
     protected Cell? standingOn;
 
@@ -115,7 +115,7 @@ public class Animal
         else if (GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Rabbit && !x.AnimalStandingOnCell.IsHungry && !x.AnimalStandingOnCell.IsBreeding)
                  && GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell == null))
         {
-            IsBreeding = true;//Ha van potenciális társa, bekapcsolja az állapotot
+            
             var list = GetValidCellsInRange().Where(x =>
                 x.AnimalStandingOnCell is Rabbit && !x.AnimalStandingOnCell.IsHungry &&
                 !x.AnimalStandingOnCell.IsBreeding);//potenciális társak listája
@@ -123,12 +123,22 @@ public class Animal
                 x.AnimalStandingOnCell is Rabbit
                 && !x.AnimalStandingOnCell.IsHungry
                 && !x.AnimalStandingOnCell.IsBreeding);//potenciális társak száma
-            list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true; //Véletlenszerűen kiválasztott társ állapotának bekapcsolása
-            Breed();
-            return new Vector2(standingOn.XPos, standingOn.YPos);
+            if (length != 0)
+            {
+                list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
+                IsBreeding = true;
+                Breed();
+                return new Vector2(standingOn.XPos, standingOn.YPos);    
+            }
+            else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
         }
         else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
-        Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
-        return new Vector2(chosenCell.XPos, chosenCell.YPos);
+
+        if (possibleCells.Count != 0)
+        {
+            Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
+            return new Vector2(chosenCell.XPos, chosenCell.YPos);
+        }
+        else return new Vector2(standingOn.XPos, standingOn.YPos);
     }
 }

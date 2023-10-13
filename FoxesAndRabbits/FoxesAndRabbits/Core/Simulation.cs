@@ -29,6 +29,14 @@ public class Simulation
                 cell.AnimalStandingOnCell.Step();
             }
         }
+
+        foreach (var cell in _grid.Cells)
+        {
+            if (cell.AnimalStandingOnCell is { IsBreeding: true })
+            {
+                cell.AnimalStandingOnCell.IsBreeding = false;
+            }
+        }
     }
 
     public void StartSimulation()
