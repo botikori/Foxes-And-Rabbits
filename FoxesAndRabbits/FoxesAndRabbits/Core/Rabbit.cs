@@ -7,7 +7,7 @@ public class Rabbit : Animal
     public static int DetectRange;
     private const int MinDetectRange = 1;
     private const int MaxDetectRange = 5;
-    
+
 
     public static void SetRabbitDetectRange(int range)
     {
@@ -30,5 +30,6 @@ public class Rabbit : Animal
     public Rabbit(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
         _maxHunger = 5;
+        Statistic.numberOfRabbits++;
     }
 }

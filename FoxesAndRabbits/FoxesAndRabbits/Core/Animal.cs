@@ -47,12 +47,12 @@ public class Animal
         if (_currentHunger + foodValue <= _maxHunger)
             _currentHunger += foodValue;
     }
-    protected virtual void Breed()
+    protected void Breed()
     {
-        List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange();
+        List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null).ToList();
         Cell randomCell = possibleCellsOfTheNewAnimal[random.Next(0, possibleCellsOfTheNewAnimal.Count)];
         _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell = new Rabbit(_grid, new Vector2(randomCell.XPos,randomCell.YPos));
-        IsBreeding = false;
+        _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell.IsBreeding = true;//Kör végén kikapcsolni!!!
     }
 
     public void UpdatePosition(Cell nextPosition)
@@ -85,7 +85,7 @@ public class Animal
         {
             for (int y = standingOn.YPos-_stepDistance; y < standingOn.YPos+_stepDistance; y++)
             {
-                if (_grid.IsCellValid(x, y) && _grid.GetCellAtPosition(x,y).AnimalStandingOnCell == null)
+                if (_grid.IsCellValid(x, y))
                 {
                     validCells.Add(_grid.GetCellAtPosition(x,y));
                 }
@@ -102,7 +102,7 @@ public class Animal
         List<Cell> possibleCells = new List<Cell>();
         if (IsHungry)
         {
-            if (GetValidCellsInRange().Exists(x => x.GrassState == Grass.High))
+            if (GetValidCellsInRange().Exists(x => x is { GrassState: Grass.High, AnimalStandingOnCell: null }))
             {
                 possibleCells.AddRange(GetValidCellsInRange().Where(x => x is { GrassState: Grass.High, AnimalStandingOnCell: null }));
             }
@@ -112,7 +112,8 @@ public class Animal
             }
             else possibleCells.AddRange(GetValidCellsInRange().Where(x=>x.AnimalStandingOnCell == null));
         }
-        else if (GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Rabbit && !x.AnimalStandingOnCell.IsHungry && !x.AnimalStandingOnCell.IsBreeding))
+        else if (GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Rabbit && !x.AnimalStandingOnCell.IsHungry && !x.AnimalStandingOnCell.IsBreeding)
+                 && GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell == null))
         {
             IsBreeding = true;//Ha van potenciális társa, bekapcsolja az állapotot
             var list = GetValidCellsInRange().Where(x =>
@@ -120,11 +121,13 @@ public class Animal
                 !x.AnimalStandingOnCell.IsBreeding);//potenciális társak listája
             var length = GetValidCellsInRange().Count(x =>
                 x.AnimalStandingOnCell is Rabbit
-            && !x.AnimalStandingOnCell.IsHungry
-            && !x.AnimalStandingOnCell.IsBreeding);//potenciális társak száma
-            list.ElementAt(length).AnimalStandingOnCell.IsBreeding = true; //Véletlenszerűen kiválasztott társ állapotának bekapcsolása
+                && !x.AnimalStandingOnCell.IsHungry
+                && !x.AnimalStandingOnCell.IsBreeding);//potenciális társak száma
+            list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true; //Véletlenszerűen kiválasztott társ állapotának bekapcsolása
             Breed();
+            return new Vector2(standingOn.XPos, standingOn.YPos);
         }
+        else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
         Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
         return new Vector2(chosenCell.XPos, chosenCell.YPos);
     }

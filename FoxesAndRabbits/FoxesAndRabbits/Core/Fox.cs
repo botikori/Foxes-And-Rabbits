@@ -25,5 +25,6 @@ public class Fox : Animal
     public Fox(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
         _maxHunger = 10;
+        Statistic.numberOfFoxes++;
     }
 }
