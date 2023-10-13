@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Numerics;
 using System.Linq;
 
@@ -26,9 +27,18 @@ public class Simulation
         {
             if (cell.AnimalStandingOnCell != null)
             {
-                cell.AnimalStandingOnCell.Step();
+                cell.AnimalStandingOnCell.DecreaseHunger();
+                if (cell.AnimalStandingOnCell != null) cell.AnimalStandingOnCell.Step();
+            }
+            else
+            {
+                Grass currentState = cell.GrassState;
+                if (currentState == Grass.Medium) cell.GrassState = Grass.High;
+                else if (currentState == Grass.Low) cell.GrassState = Grass.Medium;
+                
             }
         }
+        Statistic.numberOfRounds++;
 
         foreach (var cell in _grid.Cells)
         {
@@ -39,6 +49,8 @@ public class Simulation
         }
     }
 
+    public bool EndOfSimulation() => Statistic.numberOfRabbits <= 1 || Statistic.numberOfFoxes <= 1;
+    
     public void StartSimulation()
     {
         StartSimulation(GenerateRandomPositions().first, GenerateRandomPositions().second);

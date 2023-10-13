@@ -115,15 +115,17 @@ Console.Clear();
 DrawGrid drawGrid = new DrawGrid(grid);
 drawGrid.Draw();
 
-while (true)
+while (!simulation.EndOfSimulation())
 {
+    Console.WriteLine($"Rókák: {Statistic.numberOfFoxes} \t Nyulak: {Statistic.numberOfRabbits}");
     Console.Write($"Szeretnél a következő képkockára lépni? (I/N):");
-
+    
     string answer2 = Console.ReadLine();
 
     if (answer2.ToLower() == "i")
     {
         simulation.Tick();
         drawGrid.UpdateGrid();
-    }   
+    }
+    simulation.EndOfSimulation();
 }

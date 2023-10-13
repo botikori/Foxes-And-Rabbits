@@ -9,7 +9,7 @@ public class Animal
     protected int _stepDistance;
     private Grid _grid;
     protected Random random;
-    protected bool IsHungry;
+    internal bool IsHungry;
     public bool IsBreeding;
     
     protected Cell? standingOn;
@@ -20,7 +20,6 @@ public class Animal
     {
         this._grid = grid;
         this._stepDistance = 1;
-        this._currentHunger = this._maxHunger;
         random = new Random();
         IsHungry = _currentHunger <= _maxHunger / 2 + 1;
         IsBreeding = false;
@@ -30,13 +29,18 @@ public class Animal
 
     protected void Die()
     {
+        Animal currentAnimal = _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell;
+        if (currentAnimal is Rabbit) Statistic.numberOfRabbits--;
+        else Statistic.numberOfFoxes--;
+        
+        _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell = null;
         Statistic.numberOfDeaths++;
     }
 
     public void DecreaseHunger()
     {
         _currentHunger--;
-        if (_currentHunger == 0)
+        if (_currentHunger <= 0)
         {
             Die();
         }
