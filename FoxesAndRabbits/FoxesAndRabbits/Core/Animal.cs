@@ -85,11 +85,11 @@ public class Animal
     {
         List<Cell> validCells = new List<Cell>();
         if (standingOn == null) return validCells;
-        for (int x = standingOn.XPos - _stepDistance; x < standingOn.XPos + _stepDistance; x++)
+        for (int x = standingOn.XPos - _stepDistance; x <= standingOn.XPos + _stepDistance; x++)
         {
-            for (int y = standingOn.YPos-_stepDistance; y < standingOn.YPos+_stepDistance; y++)
+            for (int y = standingOn.YPos-_stepDistance; y <= standingOn.YPos+_stepDistance; y++)
             {
-                if (_grid.IsCellValid(x, y))
+                if (_grid.IsCellValid(x, y) && x != standingOn.XPos && y != standingOn.YPos)
                 {
                     validCells.Add(_grid.GetCellAtPosition(x,y));
                 }
