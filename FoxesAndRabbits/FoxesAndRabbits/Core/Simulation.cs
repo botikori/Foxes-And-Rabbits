@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Numerics;
 using System.Linq;
+using FoxesAndRabbits.UI;
 
 namespace FoxesAndRabbits.Core;
 
@@ -51,6 +52,7 @@ public class Simulation
         }
     }
 
+    
     public bool EndOfSimulation() => Statistic.numberOfRabbits <= 1 || Statistic.numberOfFoxes <= 1;
     
     public void StartSimulation()
@@ -101,5 +103,41 @@ public class Simulation
                && tempy < _grid.Height
                && tempx >= 0
                && tempy >= 0;
+    }
+
+    public void SaveGame()
+    {
+        Dictionary<Grass, string> symbols = new Dictionary<Grass, string>()
+        {
+            {Grass.Low,"O"},
+            {Grass.Medium,"X"},
+            {Grass.High, "#"}
+        };
+        
+        StreamWriter w = new StreamWriter("game.txt");
+        List<int> hungerValues = new List<int>();
+        w.WriteLine(_grid.Width);
+        w.WriteLine(_grid.Height);
+        foreach (var cell in _grid.Cells)
+        {
+            
+            if (cell.AnimalStandingOnCell != null)
+            {
+                hungerValues.Add(cell.AnimalStandingOnCell.GetCurrentHunger());
+                switch (cell.AnimalStandingOnCell)
+                {
+                    case Rabbit:
+                        w.Write("R");
+                        break;
+                    case Fox:
+                            w.Write("F");
+                            break;
+                }
+            }
+            else w.Write(symbols[cell.GrassState]);
+        }
+        w.WriteLine();
+        w.WriteLine(string.Join(",",hungerValues.Select(x=>x)));
+        w.Close();
     }
 }

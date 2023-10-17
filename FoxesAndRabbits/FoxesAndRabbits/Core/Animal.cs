@@ -58,6 +58,11 @@ public class Animal
         else if (grassPosition.GrassState == Grass.Medium)
             grassPosition.GrassState = Grass.Low;
     }
+    public int GetCurrentHunger()
+    {
+        return _currentHunger;
+    }
+
     protected void Breed()
     {
         List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null).ToList();
