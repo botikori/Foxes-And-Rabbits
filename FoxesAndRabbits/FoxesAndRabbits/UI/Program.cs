@@ -155,7 +155,8 @@ void SetUpGame()
         }
         simulation.EndOfSimulation();
     }
-    
+
+    ShowStatistic();
 }
 
 void ShowStatistic()
