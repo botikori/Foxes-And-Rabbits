@@ -22,6 +22,13 @@ public class Simulation
         _random = new Random();
     }
 
+    public Simulation(Grid grid)
+    {
+        _grid = grid;
+        
+        _random = new Random();
+    }
+
     public void Tick()
     {
         List<Animal> animalsToStep = _grid.Cells.Cast<Cell>().Where(x => x.AnimalStandingOnCell != null).Select(y => y.AnimalStandingOnCell).ToList();
@@ -170,7 +177,7 @@ public class Simulation
                     {
                         _grid.GetCellAtPosition(i, j).AnimalStandingOnCell = new Rabbit(_grid, new Vector2(i, j));
                     }
-                    else
+                    if (gridText[index] == 'F')
                     {
                         _grid.GetCellAtPosition(i, j).AnimalStandingOnCell = new Fox(_grid, new Vector2(i, j));
                     }
@@ -191,6 +198,6 @@ public class Simulation
             animal.SetCurrentHunger(feedLevels[index2]);
             index2++;
         }
-        
+        streamReader.Close();
     }
 }
