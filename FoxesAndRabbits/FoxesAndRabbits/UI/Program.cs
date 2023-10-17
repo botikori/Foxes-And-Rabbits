@@ -15,14 +15,18 @@ if (File.Exists("game.txt"))
     } while (!(loadAnswer.ToLower() == "i" || loadAnswer.ToLower() == "n"));
 
     if (loadAnswer == "n")SetUpGame();
-    
+    else
+    {
+        
+    }
 }
+
 
 SetUpGame();
     
 void SetUpGame()
 {
-     int columns;
+    int columns;
     int rows;
 
     do
@@ -91,8 +95,9 @@ void SetUpGame()
         
     } while (!correct);
 
-    Grid grid = new Grid(columns,rows);
-
+    Grid grid = new Grid();
+    grid.CreateGrid(columns,rows);
+    
     Simulation simulation = new Simulation(grid,numberOfRabbits,numberOfFoxes);
 
     if (answer == 'i')

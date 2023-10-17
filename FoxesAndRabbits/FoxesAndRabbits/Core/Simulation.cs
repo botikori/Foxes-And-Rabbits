@@ -140,4 +140,57 @@ public class Simulation
         w.WriteLine(string.Join(",",hungerValues.Select(x=>x)));
         w.Close();
     }
+
+    public void LoadSimulation()
+    {
+        StreamReader streamReader = new StreamReader("game.txt");
+        int width = int.Parse(streamReader.ReadLine());
+        int height = int.Parse(streamReader.ReadLine());
+
+        string gridText = streamReader.ReadLine();
+        
+        _grid.CreateGrid(width, height);
+        int index = 0;
+        
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (gridText != null)
+                {
+                    _grid.GetCellAtPosition(i, j).GrassState = gridText[index] switch
+                    {
+                        'O' => Grass.Low,
+                        'X' => Grass.Medium,
+                        '#' => Grass.High,
+                        _ => Grass.Low
+                    };
+
+                    if (gridText[index] == 'R')
+                    {
+                        _grid.GetCellAtPosition(i, j).AnimalStandingOnCell = new Rabbit(_grid, new Vector2(i, j));
+                    }
+                    else
+                    {
+                        _grid.GetCellAtPosition(i, j).AnimalStandingOnCell = new Fox(_grid, new Vector2(i, j));
+                    }
+                }
+
+                index++;
+            }
+        }
+        
+        List<Animal> animalsToSetFeedLevels = _grid.Cells.Cast<Cell>().Where(x => x.AnimalStandingOnCell != null).Select(y => y.AnimalStandingOnCell).ToList();
+        
+        int[] feedLevels = Array.ConvertAll(streamReader.ReadLine().Split(","), s => int.Parse(s));
+
+        int index2 = 0;
+        
+        foreach (var animal in animalsToSetFeedLevels)
+        {
+            animal.SetCurrentHunger(feedLevels[index2]);
+            index2++;
+        }
+        
+    }
 }

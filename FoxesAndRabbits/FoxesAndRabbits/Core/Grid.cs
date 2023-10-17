@@ -2,26 +2,10 @@ namespace FoxesAndRabbits.Core;
 
 public class Grid
 {
-    public int Width { get; init; }
-    public int Height { get; init; }
+    public int Width { get; set; }
+    public int Height { get; set; }
     
     public Cell[,] Cells;
-
-    public Grid(int width, int height)
-    {
-        Cells = new Cell[width, height];
-
-        Width = width;
-        Height = height;
-
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                CreateCell(x, y);
-            }
-        }
-    }
 
     private void CreateCell(int x, int y)
     {
@@ -48,5 +32,21 @@ public class Grid
         }
 
         return true;
+    }
+
+    public void CreateGrid(int width, int height)
+    {
+        Cells = new Cell[width, height];
+
+        Width = width;
+        Height = height;
+
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                CreateCell(x, y);
+            }
+        }
     }
 }

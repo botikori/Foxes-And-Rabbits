@@ -11,7 +11,7 @@ public class Animal
     protected Random random;
     internal bool IsHungry => _currentHunger <= _maxHunger / 2 + 1;
     public bool IsBreeding;
-    
+
     protected Cell? standingOn;
 
     public static Action? OnStep;
@@ -24,14 +24,14 @@ public class Animal
         IsBreeding = false;
         UpdatePosition(_grid.GetCellAtPosition((int)startPosition.X, (int)startPosition.Y));
     }
-    
+
 
     protected void Die()
     {
         Animal currentAnimal = _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell;
         if (currentAnimal is Rabbit) Statistic.numberOfRabbits--;
         else Statistic.numberOfFoxes--;
-        
+
         _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell = null;
         Statistic.numberOfDeaths++;
     }
@@ -44,12 +44,13 @@ public class Animal
             Die();
         }
     }
-    
+
     protected void Eat(int foodValue = 3)
     {
         if (_currentHunger + foodValue <= _maxHunger)
             _currentHunger += foodValue;
     }
+
     protected void Eat(int foodValue, Cell grassPosition)
     {
         _currentHunger += foodValue;
@@ -58,12 +59,18 @@ public class Animal
         else if (grassPosition.GrassState == Grass.Medium)
             grassPosition.GrassState = Grass.Low;
     }
+
     public int GetCurrentHunger()
     {
         return _currentHunger;
     }
 
-    protected void Breed()
+    public void SetCurrentHunger(int hunger)
+    {
+        this._currentHunger = hunger;
+    }
+
+protected void Breed()
     {
         List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null).ToList();
         Cell randomCell = possibleCellsOfTheNewAnimal[random.Next(0, possibleCellsOfTheNewAnimal.Count)];

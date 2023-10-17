@@ -8,10 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/ConsoleColors.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/DrawGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/DrawGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1696415512162" duration="1452000" />
       <workItem from="1696446260903" duration="111000" />
       <workItem from="1696590520508" duration="1204000" />
-      <workItem from="1697547852512" duration="1105000" />
+      <workItem from="1697547852512" duration="5024000" />
     </task>
     <servers />
   </component>
@@ -111,24 +111,5 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs</url>
-          <line>24</line>
-          <properties documentPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" initialLine="24" containingFunctionPresentation="Method 'Tick'">
-            <startOffsets>
-              <option value="503" />
-            </startOffsets>
-            <endOffsets>
-              <option value="504" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
