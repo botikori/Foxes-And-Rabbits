@@ -23,19 +23,21 @@ public class Simulation
 
     public void Tick()
     {
+        List<Animal> animalsToStep = _grid.Cells.Cast<Cell>().Where(x => x.AnimalStandingOnCell != null).Select(y => y.AnimalStandingOnCell).ToList();
+
+        foreach (var animal in animalsToStep)
+        {
+            animal.DecreaseHunger();
+            animal.Step();
+        }
+        
         foreach (var cell in _grid.Cells)
         {
-            if (cell.AnimalStandingOnCell != null)
-            {
-                cell.AnimalStandingOnCell.DecreaseHunger();
-                if (cell.AnimalStandingOnCell != null) cell.AnimalStandingOnCell.Step();
-            }
-            else
+            if (cell.AnimalStandingOnCell == null)
             {
                 Grass currentState = cell.GrassState;
                 if (currentState == Grass.Medium) cell.GrassState = Grass.High;
                 else if (currentState == Grass.Low) cell.GrassState = Grass.Medium;
-                
             }
         }
         Statistic.numberOfRounds++;

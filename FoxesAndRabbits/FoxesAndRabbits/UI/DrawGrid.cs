@@ -28,12 +28,14 @@ public class DrawGrid
                 if (currentanimal is not null)
                 {
                     if (currentanimal is Fox)
-                        Console.Write("F | ");
+                    {
+                        Console.Write($"{ConsoleColors.RED}F{ConsoleColors.NORMAL} | ");
+                    }
                     else
-                        Console.Write("R | ");
+                        Console.Write($"{ConsoleColors.YELLOW}R{ConsoleColors.NORMAL} | ");
                 }
                 else
-                    Console.Write($"{symbols[_grid.Cells[x,y].GrassState]} | ");
+                    Console.Write($"{ConsoleColors.GREEN}{symbols[_grid.Cells[x,y].GrassState]}{ConsoleColors.NORMAL} | ");
             }
             Console.WriteLine();
         }
