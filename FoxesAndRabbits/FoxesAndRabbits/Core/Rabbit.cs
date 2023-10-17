@@ -18,7 +18,7 @@ public class Rabbit : Animal
         DetectRange = range;
     }
 
-    protected int CalculateFoodValue(Grass grass)
+    public static int CalculateFoodValue(Grass grass)
     {
         if (grass == Grass.High)
             return 2;

@@ -39,6 +39,7 @@ public class Fox : Animal
         if (IsHungry && GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Rabbit))
         {
             possibleCells.AddRange(GetValidCellsInRange().Where(x=>x.AnimalStandingOnCell is Rabbit));
+            Eat();
             Statistic.numberOfRabbits--;
         }
         else if (GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Fox && !x.AnimalStandingOnCell.IsHungry && !x.AnimalStandingOnCell.IsBreeding)
@@ -58,7 +59,8 @@ public class Fox : Animal
                 Breed();
                 return new Vector2(standingOn.XPos, standingOn.YPos);    
             }
-            else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
+
+            possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
         }
         else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
 
@@ -67,6 +69,7 @@ public class Fox : Animal
             Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
             return new Vector2(chosenCell.XPos, chosenCell.YPos);
         }
-        else return new Vector2(standingOn.XPos, standingOn.YPos);
+
+        return new Vector2(standingOn.XPos, standingOn.YPos);
     }
 }

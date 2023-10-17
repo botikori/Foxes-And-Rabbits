@@ -9,7 +9,7 @@ public class Animal
     protected int _stepDistance;
     private Grid _grid;
     protected Random random;
-    internal bool IsHungry;
+    internal bool IsHungry => _currentHunger <= _maxHunger / 2 + 1;
     public bool IsBreeding;
     
     protected Cell? standingOn;
@@ -21,7 +21,6 @@ public class Animal
         this._grid = grid;
         this._stepDistance = 1;
         random = new Random();
-        IsHungry = _currentHunger <= _maxHunger / 2 + 1;
         IsBreeding = false;
         UpdatePosition(_grid.GetCellAtPosition((int)startPosition.X, (int)startPosition.Y));
     }
@@ -51,12 +50,20 @@ public class Animal
         if (_currentHunger + foodValue <= _maxHunger)
             _currentHunger += foodValue;
     }
+    protected void Eat(int foodValue, Cell grassPosition)
+    {
+        _currentHunger += foodValue;
+        if (grassPosition.GrassState == Grass.High)
+            grassPosition.GrassState = Grass.Medium;
+        else if (grassPosition.GrassState == Grass.Medium)
+            grassPosition.GrassState = Grass.Low;
+    }
     protected void Breed()
     {
         List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null).ToList();
         Cell randomCell = possibleCellsOfTheNewAnimal[random.Next(0, possibleCellsOfTheNewAnimal.Count)];
         _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell = new Rabbit(_grid, new Vector2(randomCell.XPos,randomCell.YPos));
-        _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell.IsBreeding = true;//Kör végén kikapcsolni!!!
+        _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell!.IsBreeding = true;//Kör végén kikapcsolni!!!
     }
 
     public void UpdatePosition(Cell nextPosition)
@@ -99,13 +106,21 @@ public class Animal
     }
     protected virtual Vector2 NextStep()
     {
+        Vector2 currentPos = new Vector2(standingOn.XPos, standingOn.YPos);
         if (IsBreeding)
         {
-            return new Vector2(standingOn.XPos, standingOn.YPos);
+            return currentPos;
         }
         List<Cell> possibleCells = new List<Cell>();
         if (IsHungry)
         {
+            int currentFoodValue =
+                Rabbit.CalculateFoodValue(standingOn.GrassState);
+            if (standingOn.GrassState != Grass.Low && currentFoodValue <= _maxHunger - _currentHunger)
+            {
+                Eat(currentFoodValue, standingOn);
+                return currentPos;
+            }
             if (GetValidCellsInRange().Exists(x => x is { GrassState: Grass.High, AnimalStandingOnCell: null }))
             {
                 possibleCells.AddRange(GetValidCellsInRange().Where(x => x is { GrassState: Grass.High, AnimalStandingOnCell: null }));
@@ -132,7 +147,7 @@ public class Animal
                 list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
                 IsBreeding = true;
                 Breed();
-                return new Vector2(standingOn.XPos, standingOn.YPos);    
+                return currentPos;    
             }
             else possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
         }
@@ -143,6 +158,7 @@ public class Animal
             Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
             return new Vector2(chosenCell.XPos, chosenCell.YPos);
         }
-        else return new Vector2(standingOn.XPos, standingOn.YPos);
+
+        return currentPos;
     }
 }
