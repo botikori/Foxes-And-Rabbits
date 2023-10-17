@@ -155,7 +155,13 @@ void SetUpGame()
         }
         simulation.EndOfSimulation();
     }
-    Statistic.ShowStatistic();
+    
 }
 
+void ShowStatistic()
+{
+    Console.WriteLine("\nA játék véget ért!");
+    Console.WriteLine("\nStatisztika\n");
+    Console.WriteLine($"Eltelt körök száma: {Statistic.numberOfRounds}\nRókák száma: {Statistic.numberOfFoxes}\nNyulak száma: {Statistic.numberOfRabbits}\nJáték során keletkezett halálesetek száma: {Statistic.numberOfDeaths}");
+}
 
