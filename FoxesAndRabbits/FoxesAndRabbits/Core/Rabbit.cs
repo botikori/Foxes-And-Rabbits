@@ -29,8 +29,8 @@ public class Rabbit : Animal
 
     public Rabbit(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
-        _maxHunger = 5;
-        _currentHunger = _maxHunger;
+        MaxHunger = 5;
+        CurrentHunger = MaxHunger;
         Statistic.numberOfRabbits++;
     }
 }

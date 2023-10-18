@@ -72,7 +72,7 @@ void SetUpGame()
     do
     {
         Console.WriteLine($"#3 Állatok száma a pályán");
-        Console.Write("Nyúlak száma: ");
+        Console.Write("Nyulak száma: ");
         correctAmount = int.TryParse(Console.ReadLine(), out numberOfRabbits);
         Console.Write("Rókák száma: ");
         correctAmount = int.TryParse(Console.ReadLine(), out numberOfFoxes);

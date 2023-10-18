@@ -17,3 +17,5 @@ M
 FoxesAndRabbits/UI/Program.cs,3\a\3a18e51e1b8bf317bca700dab40eea0c12002550
 M
 FoxesAndRabbits/Core/Grass.cs,6\d\6d72610adf2bc9a622513ba039252ffabd9b3562
+Q
+!FoxesAndRabbits/Core/Statistic.cs,a\f\af9ea1db6a72ce91e19209cadaf514ddce2f7c54

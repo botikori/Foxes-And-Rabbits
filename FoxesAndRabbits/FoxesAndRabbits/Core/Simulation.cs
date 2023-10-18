@@ -7,10 +7,10 @@ namespace FoxesAndRabbits.Core;
 
 public class Simulation
 {
-    private Grid _grid;
-    private Random _random;
-    private int _rabbitCount = 2;
-    private int _foxCount = 2;
+    private readonly Grid _grid;
+    private readonly Random _random;
+    private readonly int _rabbitCount = 2;
+    private readonly int _foxCount = 2;
     
     
     public Simulation(Grid grid, int rabbitCount, int foxCount)
@@ -92,12 +92,12 @@ public class Simulation
     {
         foreach (var rabbitPosition in rabbitPositions)
         {
-            Rabbit currentRabbit = new Rabbit(_grid, rabbitPosition);
+             new Rabbit(_grid, rabbitPosition);
         }
 
         foreach (var foxPosition in foxPositions)
         {
-            Fox currentFox = new Fox(_grid, foxPosition);
+            new Fox(_grid, foxPosition);
         }
     }
 
@@ -208,9 +208,5 @@ public class Simulation
         Statistic.numberOfDeaths = Convert.ToInt32(statistics[3]);
         
         streamReader.Close();
-        
-        //w.Write($"{Statistic.numberOfFoxes},{Statistic.numberOfRabbits},{Statistic.numberOfRounds},{Statistic.numberOfDeaths}");
-        
-        
     }
 }

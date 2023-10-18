@@ -1,8 +1,6 @@
 
-:csharpsquid:S2933"Make '_grid' 'readonly'.(¦ÿğÆúÿÿÿÿ
-7csharpsquid:S2933"Make '_random' 'readonly'.(ÚÀ§•
-Acsharpsquid:S2933	"Make '_animalCount' 'readonly'.(Ğæ¸Îùÿÿÿÿ
-vcsharpsquid:S3604	"TRemove the member initializer, all constructors set an initial value for the member.(Ğæ¸Îùÿÿÿÿ
-Wcsharpsquid:S4136":All 'StartSimulation' method overloads should be adjacent.(›†
-Ncsharpsquid:S14812"1Remove the unused local variable 'currentRabbit'.(©™Ó‡
-Kcsharpsquid:S14817".Remove the unused local variable 'currentFox'.(ø¯“‹
+|csharpsquid:S3776˜"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Îò“°úÿÿÿÿ8ÕíÑ´1
+[csharpsquid:S32675"2Loops should be simplified with "LINQ" expressions(‰‘†¨ıÿÿÿÿ8âíÑ´1
+Wcsharpsquid:S4136A":All 'StartSimulation' method overloads should be adjacent.(›†
+ucsharpsquid:S1848_"LEither remove this useless object instantiation of class 'Rabbit' or use it.(­üéñıÿÿÿÿ8øØ¡´1
+rcsharpsquid:S1848d"IEither remove this useless object instantiation of class 'Fox' or use it.(œ¦Ëµúÿÿÿÿ8Ş²¡´1

@@ -8,10 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5566fb6-1137-4a59-9c05-50c86524bd11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/3/a/3a18e51e1b8bf317bca700dab40eea0c12002550" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/3/a/3a18e51e1b8bf317bca700dab40eea0c12002550" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/7/9/793e607b2789ef1684b2b4571f1df027f164c944" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/7/9/793e607b2789ef1684b2b4571f1df027f164c944" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/f/2/f299245be76a2051a3f8e38cb6d041b067d13069" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/f/2/f299245be76a2051a3f8e38cb6d041b067d13069" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FoxesAndRabbits/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Animal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Fox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Fox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Grid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Rabbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Rabbit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/Core/Simulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/UI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/Debug/net7.0/FoxesAndRabbits.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/FoxesAndRabbits.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/FoxesAndRabbits/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,27 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.36936936",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36936936&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/botikori/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/botikori/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
-      "/home/botikori/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\snorb\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\snorb\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="FoxesAndRabbits" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -102,6 +118,8 @@
       <workItem from="1696446260903" duration="111000" />
       <workItem from="1696590520508" duration="1204000" />
       <workItem from="1697547852512" duration="5024000" />
+      <workItem from="1697647963166" duration="406000" />
+      <workItem from="1697649055089" duration="735000" />
     </task>
     <servers />
   </component>

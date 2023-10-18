@@ -5,7 +5,6 @@ namespace FoxesAndRabbits.Core;
 
 public class Fox : Animal
 {
-    private static int DetectRange;
     private const int MinDetectRange = 2;
     private const int MaxDetectRange = 6;
     
@@ -24,8 +23,8 @@ public class Fox : Animal
 
     public Fox(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
-        _maxHunger = 10;
-        _currentHunger = _maxHunger;
+        MaxHunger = 10;
+        CurrentHunger = MaxHunger;
         Statistic.numberOfFoxes++;
     }
     
@@ -33,7 +32,7 @@ public class Fox : Animal
     {
         if (IsBreeding)
         {
-            return new Vector2(standingOn.XPos, standingOn.YPos);
+            return new Vector2(StandingOn.XPos, StandingOn.YPos);
         }
         List<Cell> possibleCells = new List<Cell>();
         if (IsHungry && GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Rabbit))
@@ -54,10 +53,10 @@ public class Fox : Animal
                 && !x.AnimalStandingOnCell.IsBreeding);
             if (length != 0)
             {
-                list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
+                list.ElementAt(Random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
                 IsBreeding = true;
                 Breed();
-                return new Vector2(standingOn.XPos, standingOn.YPos);    
+                return new Vector2(StandingOn.XPos, StandingOn.YPos);    
             }
 
             possibleCells.AddRange(GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null));
@@ -66,10 +65,10 @@ public class Fox : Animal
 
         if (possibleCells.Count != 0)
         {
-            Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
+            Cell chosenCell = possibleCells[Random.Next(possibleCells.Count)];
             return new Vector2(chosenCell.XPos, chosenCell.YPos);
         }
 
-        return new Vector2(standingOn.XPos, standingOn.YPos);
+        return new Vector2(StandingOn.XPos, StandingOn.YPos);
     }
 }

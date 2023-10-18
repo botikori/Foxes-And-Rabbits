@@ -4,23 +4,21 @@ namespace FoxesAndRabbits.Core;
 
 public class Animal
 {
-    protected int _maxHunger;
-    protected int _currentHunger;
-    protected int _stepDistance;
-    private Grid _grid;
-    protected Random random;
-    internal bool IsHungry => _currentHunger <= _maxHunger / 2 + 1;
-    public bool IsBreeding;
+    protected int MaxHunger;
+    protected int CurrentHunger;
+    private readonly int _stepDistance;
+    private readonly Grid _grid;
+    protected readonly Random Random;
+    internal bool IsHungry => CurrentHunger <= MaxHunger / 2 + 1;
+    public bool IsBreeding { get; set; }
 
-    protected Cell? standingOn;
-
-    public static Action? OnStep;
-
+    protected Cell? StandingOn;
+    
     public Animal(Grid grid, Vector2 startPosition)
     {
         this._grid = grid;
         this._stepDistance = 1;
-        random = new Random();
+        Random = new Random();
         IsBreeding = false;
         UpdatePosition(_grid.GetCellAtPosition((int)startPosition.X, (int)startPosition.Y));
     }
@@ -28,18 +26,18 @@ public class Animal
 
     protected void Die()
     {
-        Animal currentAnimal = _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell;
+        Animal currentAnimal = _grid.GetCellAtPosition(StandingOn.XPos, StandingOn.YPos).AnimalStandingOnCell;
         if (currentAnimal is Rabbit) Statistic.numberOfRabbits--;
         else Statistic.numberOfFoxes--;
 
-        _grid.GetCellAtPosition(standingOn.XPos, standingOn.YPos).AnimalStandingOnCell = null;
+        _grid.GetCellAtPosition(StandingOn.XPos, StandingOn.YPos).AnimalStandingOnCell = null;
         Statistic.numberOfDeaths++;
     }
 
     public void DecreaseHunger()
     {
-        _currentHunger--;
-        if (_currentHunger <= 0)
+        CurrentHunger--;
+        if (CurrentHunger <= 0)
         {
             Die();
         }
@@ -47,13 +45,13 @@ public class Animal
 
     protected void Eat(int foodValue = 3)
     {
-        if (_currentHunger + foodValue <= _maxHunger)
-            _currentHunger += foodValue;
+        if (CurrentHunger + foodValue <= MaxHunger)
+            CurrentHunger += foodValue;
     }
 
     protected void Eat(int foodValue, Cell grassPosition)
     {
-        _currentHunger += foodValue;
+        CurrentHunger += foodValue;
         if (grassPosition.GrassState == Grass.High)
             grassPosition.GrassState = Grass.Medium;
         else if (grassPosition.GrassState == Grass.Medium)
@@ -62,53 +60,51 @@ public class Animal
 
     public int GetCurrentHunger()
     {
-        return _currentHunger;
+        return CurrentHunger;
     }
 
     public void SetCurrentHunger(int hunger)
     {
-        this._currentHunger = hunger;
+        this.CurrentHunger = hunger;
     }
 
 protected void Breed()
     {
         List<Cell> possibleCellsOfTheNewAnimal = GetValidCellsInRange().Where(x => x.AnimalStandingOnCell == null).ToList();
-        Cell randomCell = possibleCellsOfTheNewAnimal[random.Next(0, possibleCellsOfTheNewAnimal.Count)];
+        Cell randomCell = possibleCellsOfTheNewAnimal[Random.Next(0, possibleCellsOfTheNewAnimal.Count)];
         _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell = new Rabbit(_grid, new Vector2(randomCell.XPos,randomCell.YPos));
         _grid.Cells[randomCell.XPos, randomCell.YPos].AnimalStandingOnCell!.IsBreeding = true;//Kör végén kikapcsolni!!!
     }
 
     public void UpdatePosition(Cell nextPosition)
     {
-        if (standingOn != null)
-            standingOn.AnimalStandingOnCell = null;
+        if (StandingOn != null)
+            StandingOn.AnimalStandingOnCell = null;
         nextPosition.AnimalStandingOnCell = this;
-        standingOn = nextPosition;
+        StandingOn = nextPosition;
     }
     public void Step(Vector2 direction)
     {
-        Cell nextPosition = _grid.GetCellAtPosition(standingOn.XPos + (int)direction.X * _stepDistance 
-            , standingOn.YPos + (int)direction.Y * _stepDistance);
+        Cell nextPosition = _grid.GetCellAtPosition(StandingOn.XPos + (int)direction.X * _stepDistance 
+            , StandingOn.YPos + (int)direction.Y * _stepDistance);
         UpdatePosition(nextPosition);
-        OnStep?.Invoke();
     }
     public void Step()
     {
         Vector2 nextPosition = NextStep();
         Cell nextPositionCell = _grid.GetCellAtPosition((int)nextPosition.X,(int)nextPosition.Y);
         UpdatePosition(nextPositionCell);
-        //OnStep?.Invoke();
     }
 
     protected List<Cell> GetValidCellsInRange()
     {
         List<Cell> validCells = new List<Cell>();
-        if (standingOn == null) return validCells;
-        for (int x = standingOn.XPos - _stepDistance; x <= standingOn.XPos + _stepDistance; x++)
+        if (StandingOn == null) return validCells;
+        for (int x = StandingOn.XPos - _stepDistance; x <= StandingOn.XPos + _stepDistance; x++)
         {
-            for (int y = standingOn.YPos-_stepDistance; y <= standingOn.YPos+_stepDistance; y++)
+            for (int y = StandingOn.YPos-_stepDistance; y <= StandingOn.YPos+_stepDistance; y++)
             {
-                if (_grid.IsCellValid(x, y) && x != standingOn.XPos && y != standingOn.YPos)
+                if (_grid.IsCellValid(x, y) && x != StandingOn.XPos && y != StandingOn.YPos)
                 {
                     validCells.Add(_grid.GetCellAtPosition(x,y));
                 }
@@ -118,7 +114,7 @@ protected void Breed()
     }
     protected virtual Vector2 NextStep()
     {
-        Vector2 currentPos = new Vector2(standingOn.XPos, standingOn.YPos);
+        Vector2 currentPos = new Vector2(StandingOn.XPos, StandingOn.YPos);
         if (IsBreeding)
         {
             return currentPos;
@@ -127,10 +123,10 @@ protected void Breed()
         if (IsHungry)
         {
             int currentFoodValue =
-                Rabbit.CalculateFoodValue(standingOn.GrassState);
-            if (standingOn.GrassState != Grass.Low && currentFoodValue <= _maxHunger - _currentHunger)
+                Rabbit.CalculateFoodValue(StandingOn.GrassState);
+            if (StandingOn.GrassState != Grass.Low && currentFoodValue <= MaxHunger - CurrentHunger)
             {
-                Eat(currentFoodValue, standingOn);
+                Eat(currentFoodValue, StandingOn);
                 return currentPos;
             }
             if (GetValidCellsInRange().Exists(x => x is { GrassState: Grass.High, AnimalStandingOnCell: null }))
@@ -149,14 +145,14 @@ protected void Breed()
             
             var list = GetValidCellsInRange().Where(x =>
                 x.AnimalStandingOnCell is Rabbit && !x.AnimalStandingOnCell.IsHungry &&
-                !x.AnimalStandingOnCell.IsBreeding);//potenciális társak listája
+                !x.AnimalStandingOnCell.IsBreeding);
             var length = GetValidCellsInRange().Count(x =>
                 x.AnimalStandingOnCell is Rabbit
                 && !x.AnimalStandingOnCell.IsHungry
-                && !x.AnimalStandingOnCell.IsBreeding);//potenciális társak száma
+                && !x.AnimalStandingOnCell.IsBreeding);
             if (length != 0)
             {
-                list.ElementAt(random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
+                list.ElementAt(Random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
                 IsBreeding = true;
                 Breed();
                 return currentPos;    
@@ -167,10 +163,10 @@ protected void Breed()
 
         if (possibleCells.Count != 0)
         {
-            Cell chosenCell = possibleCells[random.Next(possibleCells.Count)];
+            Cell chosenCell = possibleCells[Random.Next(possibleCells.Count)];
             return new Vector2(chosenCell.XPos, chosenCell.YPos);
         }
-
+        
         return currentPos;
     }
 }

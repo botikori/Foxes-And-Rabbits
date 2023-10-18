@@ -3,7 +3,7 @@ namespace FoxesAndRabbits.UI;
 
 public class DrawGrid
 {
-    private Grid _grid;
+    private readonly Grid _grid;
    
     public DrawGrid(Grid grid)
     {

@@ -5,19 +5,19 @@ public class Grid
     public int Width { get; set; }
     public int Height { get; set; }
     
-    public Cell[,] Cells;
+    public Cell[,]? Cells { get; set; }
 
     private void CreateCell(int x, int y)
     {
         Cell currentCell = new Cell(x, y);
-        Cells[x, y] = currentCell;
+        if (Cells != null) Cells[x, y] = currentCell;
     }
 
     public Cell GetCellAtPosition(int x, int y)
     {
         if (IsCellValid(x, y))
         {
-            return Cells[x, y];
+            if (Cells != null) return Cells[x, y];
         }
         
         return null;
