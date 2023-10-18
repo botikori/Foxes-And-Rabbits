@@ -1,6 +1,6 @@
 # Foxes and Rabbits
 ## Játék leírása
-- A program egy életjátok szimulál amiben rókák és nyulak vannak. A program indulásakor megkeresi a program, hogy létezik-e mentési fájl. Ha létezik akkor opcionális az, hogy betölti az előző játékot vagy újat kezd.
+- A program egy életjátékot szimulál amiben rókák és nyulak vannak. A program indulásakor megkeresi a program, hogy létezik-e mentési fájl. Ha létezik akkor opcionális az, hogy betölti az előző játékot vagy újat kezd.
 A mentett fájl tartalmazza az oszlopok, sorok számát illetve az egész rácsnak a tartalmát valamint az állatok éhségi szintjeit.
 Itt még eldönthetjük, hogy véletlenszerűen szeretnénk elhelyezni az állatokat vagy a felhasználó határozhatja meg, hogy hova rakja le a program az állatokat figyelembe véve azt, hogy helyes-e a bevitt pozíció.
 - Ha a felhasználó teljesen új játékot kezd akkor a program bekéri a sorok, oszlopok valamint az egyes állatok számát figyelve és kezeli ha hiba lép fel a bemenet során. Az élőlények minden egyes körben vesztenek egy darab éhségi szintet.
