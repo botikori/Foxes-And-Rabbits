@@ -21,7 +21,7 @@ public class Animal
         _stepDistance = 1;
         Random = new Random();
         IsBreeding = false;
-        IsBreeding = false;
+        IsMoved = false;
         UpdatePosition(_grid.GetCellAtPosition((int)startPosition.X, (int)startPosition.Y));
     }
 
