@@ -69,13 +69,14 @@ void SetUpGame()
     int numberOfRabbits;
     int numberOfAnimals;
     bool correctAmount;
+    bool correctAmount2;
     do
     {
-        Console.WriteLine($"#3 Állatok száma a pályán");
+        Console.WriteLine("#3 Állatok száma a pályán");
         Console.Write("Nyulak száma: ");
         correctAmount = int.TryParse(Console.ReadLine(), out numberOfRabbits);
         Console.Write("Rókák száma: ");
-        correctAmount = int.TryParse(Console.ReadLine(), out numberOfFoxes);
+        correctAmount2 = int.TryParse(Console.ReadLine(), out numberOfFoxes);
         numberOfAnimals = numberOfFoxes + numberOfRabbits;
         if (numberOfAnimals > (rows * columns) * 0.3)
         {
@@ -83,7 +84,7 @@ void SetUpGame()
         }
 
         Console.Clear();
-    } while (!correctAmount);
+    } while (!correctAmount||!correctAmount2);
 
     char answer;
     bool correct;
@@ -153,7 +154,7 @@ void SetUpGame()
 
     while (!simulation.EndOfSimulation())
     {
-        Console.WriteLine($"Rókák: {Statistic.numberOfFoxes} \t Nyulak: {Statistic.numberOfRabbits}");
+        Console.WriteLine($"Rókák: {Statistic.NumberOfFoxes} \t Nyulak: {Statistic.NumberOfRabbits} \t Eddigi bekövetkezett halálok: {Statistic.NumberOfDeaths}");
         Console.Write($"Szeretnél a következő képkockára lépni vagy menteni? (I/mentes):");
         
         string answer2 = Console.ReadLine();
@@ -173,6 +174,7 @@ void SetUpGame()
         simulation.EndOfSimulation();
     }
 
+    drawGrid.UpdateGrid();
     ShowStatistic();
 
 
@@ -180,6 +182,6 @@ void ShowStatistic()
 {
     Console.WriteLine("\nA játék véget ért!");
     Console.WriteLine("\nStatisztika\n");
-    Console.WriteLine($"Eltelt körök száma: {Statistic.numberOfRounds}\nRókák száma: {Statistic.numberOfFoxes}\nNyulak száma: {Statistic.numberOfRabbits}\nJáték során keletkezett halálesetek száma: {Statistic.numberOfDeaths}");
+    Console.WriteLine($"Eltelt körök száma: {Statistic.NumberOfRounds}\nRókák száma: {Statistic.NumberOfFoxes}\nNyulak száma: {Statistic.NumberOfRabbits}\nJáték során keletkezett halálesetek száma: {Statistic.NumberOfDeaths}");
 }
 

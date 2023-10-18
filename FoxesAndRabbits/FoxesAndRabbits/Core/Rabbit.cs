@@ -4,20 +4,6 @@ namespace FoxesAndRabbits.Core;
 
 public class Rabbit : Animal
 {
-    public static int DetectRange;
-    private const int MinDetectRange = 1;
-    private const int MaxDetectRange = 5;
-
-
-    public static void SetRabbitDetectRange(int range)
-    {
-        if (range > MaxDetectRange || range < MinDetectRange) 
-        {
-            throw new ArgumentOutOfRangeException();
-        }
-        DetectRange = range;
-    }
-
     public static int CalculateFoodValue(Grass grass)
     {
         if (grass == Grass.High)
@@ -31,6 +17,6 @@ public class Rabbit : Animal
     {
         MaxHunger = 5;
         CurrentHunger = MaxHunger;
-        Statistic.numberOfRabbits++;
+        Statistic.NumberOfRabbits++;
     }
 }

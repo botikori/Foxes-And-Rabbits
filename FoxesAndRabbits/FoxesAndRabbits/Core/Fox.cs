@@ -1,31 +1,14 @@
 ﻿using System.Numerics;
-using FoxesAndRabbits.Core.Exceptions;
 
 namespace FoxesAndRabbits.Core;
 
 public class Fox : Animal
 {
-    private const int MinDetectRange = 2;
-    private const int MaxDetectRange = 6;
-    
-    public static void SetFoxDetectRange(int range)
-    {
-        if (range > MaxDetectRange || range < MinDetectRange) 
-        {
-            throw new ArgumentOutOfRangeException("Fox detection range must be between 2 and 6!");
-        }
-
-        if (Rabbit.DetectRange >= range)
-        {
-            throw new FoxRangeTooLowException();
-        }
-    }
-
     public Fox(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
         MaxHunger = 10;
         CurrentHunger = MaxHunger;
-        Statistic.numberOfFoxes++;
+        Statistic.NumberOfFoxes++;
     }
     
     protected override Vector2 NextStep()
@@ -39,7 +22,8 @@ public class Fox : Animal
         {
             possibleCells.AddRange(GetValidCellsInRange().Where(x=>x.AnimalStandingOnCell is Rabbit));
             Eat();
-            Statistic.numberOfRabbits--;
+            Statistic.NumberOfDeaths++;
+            Statistic.NumberOfRabbits--;
         }
         else if (GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell is Fox && !x.AnimalStandingOnCell.IsHungry && !x.AnimalStandingOnCell.IsBreeding)
                  && GetValidCellsInRange().Exists(x => x.AnimalStandingOnCell == null))
@@ -55,7 +39,7 @@ public class Fox : Animal
             {
                 list.ElementAt(Random.Next(length)).AnimalStandingOnCell.IsBreeding = true;
                 IsBreeding = true;
-                Breed();
+                Breed(false);
                 return new Vector2(StandingOn.XPos, StandingOn.YPos);    
             }
 
@@ -66,6 +50,7 @@ public class Fox : Animal
         if (possibleCells.Count != 0)
         {
             Cell chosenCell = possibleCells[Random.Next(possibleCells.Count)];
+            if (chosenCell.AnimalStandingOnCell != null) chosenCell.AnimalStandingOnCell = null;
             return new Vector2(chosenCell.XPos, chosenCell.YPos);
         }
 
