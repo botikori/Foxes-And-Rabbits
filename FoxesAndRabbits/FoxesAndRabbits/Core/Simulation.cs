@@ -145,6 +145,7 @@ public class Simulation
         }
         w.WriteLine();
         w.WriteLine(string.Join(",",hungerValues.Select(x=>x)));
+        w.Write($"{Statistic.numberOfFoxes},{Statistic.numberOfRabbits},{Statistic.numberOfRounds},{Statistic.numberOfDeaths}");
         w.Close();
     }
 
