@@ -199,6 +199,18 @@ public class Simulation
             animal.SetCurrentHunger(feedLevels[index2]);
             index2++;
         }
+
+        string[] statistics = streamReader.ReadLine().Split(',');
+
+        Statistic.numberOfFoxes = Convert.ToInt32(statistics[0]);
+        Statistic.numberOfRabbits = Convert.ToInt32(statistics[1]);
+        Statistic.numberOfRounds = Convert.ToInt32(statistics[2]);
+        Statistic.numberOfDeaths = Convert.ToInt32(statistics[3]);
+        
         streamReader.Close();
+        
+        //w.Write($"{Statistic.numberOfFoxes},{Statistic.numberOfRabbits},{Statistic.numberOfRounds},{Statistic.numberOfDeaths}");
+        
+        
     }
 }
