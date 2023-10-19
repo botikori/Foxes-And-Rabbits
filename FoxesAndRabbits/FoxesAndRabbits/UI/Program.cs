@@ -84,7 +84,7 @@ void SetUpGame()
         }
 
         Console.Clear();
-    } while (!correctAmount||!correctAmount2);
+    } while (!correctAmount||!correctAmount2||numberOfRabbits <= 1 || numberOfFoxes <= 1);
 
     char answer;
     bool correct;
