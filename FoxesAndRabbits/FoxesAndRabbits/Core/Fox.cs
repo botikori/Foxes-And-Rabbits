@@ -6,7 +6,7 @@ public class Fox : Animal
 {
     public Fox(Grid grid, Vector2 startPosition) : base(grid, startPosition)
     {
-        MaxHunger = 10;
+        MaxHunger = 6;
         CurrentHunger = MaxHunger;
         Statistic.NumberOfFoxes++;
     }
