@@ -176,6 +176,7 @@ void SetUpGame()
 
     drawGrid.UpdateGrid();
     ShowStatistic();
+    Console.ReadKey();
 
 
 void ShowStatistic()
