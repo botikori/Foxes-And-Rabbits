@@ -31,14 +31,6 @@ public class Simulation
 
     public void Tick()
     {
-        List<Animal> animalsToStep = _grid.Cells.Cast<Cell>().Where(x => x.AnimalStandingOnCell != null).Select(y => y.AnimalStandingOnCell).ToList();
-
-        foreach (var animal in animalsToStep)
-        {
-            animal.DecreaseHunger();
-            animal.Step();
-        }
-        
         foreach (var cell in _grid.Cells)
         {
             if (cell.AnimalStandingOnCell == null)
@@ -47,8 +39,13 @@ public class Simulation
                 if (currentState == Grass.Medium) cell.GrassState = Grass.High;
                 else if (currentState == Grass.Low) cell.GrassState = Grass.Medium;
             }
+            else if (!cell.AnimalStandingOnCell.IsMoved)
+            {
+                cell.AnimalStandingOnCell.DecreaseHunger();
+                cell.AnimalStandingOnCell?.Step();
+            }
         }
-        Statistic.numberOfRounds++;
+        Statistic.NumberOfRounds++;
 
         foreach (var cell in _grid.Cells)
         {
@@ -56,15 +53,20 @@ public class Simulation
             {
                 cell.AnimalStandingOnCell.IsBreeding = false;
             }
+            if (cell.AnimalStandingOnCell is { IsMoved: true })
+            {
+                cell.AnimalStandingOnCell.IsMoved = false;
+            }
         }
     }
 
     
-    public bool EndOfSimulation() => Statistic.numberOfRabbits <= 1 || Statistic.numberOfFoxes <= 1;
+    public bool EndOfSimulation() => Statistic.NumberOfRabbits <= 1 || Statistic.NumberOfFoxes <= 1;
     
     public void StartSimulation()
     {
-        StartSimulation(GenerateRandomPositions().first, GenerateRandomPositions().second);
+        (List<Vector2> first, List<Vector2> second) sim = GenerateRandomPositions();
+        StartSimulation(sim.first, sim.second);
     }
     
     private (List<Vector2> first, List<Vector2> second) GenerateRandomPositions()
@@ -145,7 +147,7 @@ public class Simulation
         }
         w.WriteLine();
         w.WriteLine(string.Join(",",hungerValues.Select(x=>x)));
-        w.Write($"{Statistic.numberOfFoxes},{Statistic.numberOfRabbits},{Statistic.numberOfRounds},{Statistic.numberOfDeaths}");
+        w.Write($"{Statistic.NumberOfFoxes},{Statistic.NumberOfRabbits},{Statistic.NumberOfRounds},{Statistic.NumberOfDeaths}");
         w.Close();
     }
 
@@ -202,10 +204,10 @@ public class Simulation
 
         string[] statistics = streamReader.ReadLine().Split(',');
 
-        Statistic.numberOfFoxes = Convert.ToInt32(statistics[0]);
-        Statistic.numberOfRabbits = Convert.ToInt32(statistics[1]);
-        Statistic.numberOfRounds = Convert.ToInt32(statistics[2]);
-        Statistic.numberOfDeaths = Convert.ToInt32(statistics[3]);
+        Statistic.NumberOfFoxes = Convert.ToInt32(statistics[0]);
+        Statistic.NumberOfRabbits = Convert.ToInt32(statistics[1]);
+        Statistic.NumberOfRounds = Convert.ToInt32(statistics[2]);
+        Statistic.NumberOfDeaths = Convert.ToInt32(statistics[3]);
         
         streamReader.Close();
     }
