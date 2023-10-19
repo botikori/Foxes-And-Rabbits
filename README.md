@@ -1,4 +1,22 @@
 # Foxes and Rabbits
+
+## A projekt elindítása
+
+A projekt klónozása githubról
+```
+git clone https://github.com/botikori/Foxes-And-Rabbits.git
+```
+
+Belépés a projekt directory-ba
+```
+cd ./Foxes-And-Rabbits/FoxesAndRabbits/FoxesAndRabbits/
+```
+
+A projekt futtatása
+```
+dotnet run --property WarningLevel=0
+```
+
 ## Játék leírása
 - A program egy életjátékot szimulál amiben rókák és nyulak vannak. A program indulásakor megkeresi a program, hogy létezik-e mentési fájl. Ha létezik akkor opcionális az, hogy betölti az előző játékot vagy újat kezd.
 A mentett fájl tartalmazza az oszlopok, sorok számát illetve az egész rácsnak a tartalmát valamint az állatok éhségi szintjeit.
@@ -11,6 +29,5 @@ A rókák nyulakra vadásznak és minden lépésnél fogy az éhség szintje. Ha
 ## Statisztika
 A játékban van statisztika is ami követi az állatok számát, halálok számát és az eltelt körök számát. A statisztika adatai is mentődésre kerülnek a szöveges állományba amit egy új játék kezdetén betölthet a felhasználó ha úgy határoz.
 
-
  ## UML-diagram
-![image](https://github.com/botikori/Foxes-And-Rabbits/assets/99285276/61b62ba7-f302-4e1c-bb7e-9cac052b9d49)
+![image_class_diagram,](https://github.com/botikori/Foxes-And-Rabbits/assets/54451878/95edaf93-5ab3-4082-895f-d9a8d4635eda)
